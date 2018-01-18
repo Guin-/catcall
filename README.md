@@ -6,15 +6,23 @@ Find an adoptable cat that suits your needs
 1. Install python packages
     `$ pip install -r requirements.txt`
 
-2. Create environment variables for your SECRET_KEY and database settings
+2. Install frontend dependencies
+    `$ npm install`
 
-3. Set up your local database and run migrations
+3. Create environment variables for your SECRET_KEY and database settings
+
+4. Set up your local database and run migrations
+
+5. Initial frontend build
+    `$ npm run build`
 
 ## Development
 
-1. From the `backend` directory start backend server at localhost:8000
-
+1. From the backend directory start the backend dev server at localhost:8000
    `$ ./manage.py runserver`
+
+2. From the root directory run
+    `$ npm run watch`
 
 ## Testing
 
