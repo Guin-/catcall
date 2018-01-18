@@ -36,6 +36,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, '../frontend/static/'),
+)
+
+WEBPACK_LOADER = {
+        'DEFAULT': {
+                    'BUNDLE_DIR_NAME': 'bundles/',
+                    'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.json'),
+                    }
+    }
 
 # Application definition
 
@@ -46,6 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
