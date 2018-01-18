@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
+import { PageHeader } from 'react-bootstrap'
 
 const App = () => (
   <div>
-    <p>React Hello World</p>
+    <PageHeader>Hello World <small>React bootstrap works</small></PageHeader>
   </div>
 )
 
