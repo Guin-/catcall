@@ -9,11 +9,9 @@ Find an adoptable cat that suits your needs
 2. Install frontend dependencies
     `$ npm install`
 
-3. Create environment variables for your SECRET_KEY and database settings
+3. Create environment variable for your `SECRET_KEY`
 
-4. Set up your local database and run migrations
-
-5. Initial frontend build
+4. Initial frontend build
     `$ npm run build`
 
 ## Development
