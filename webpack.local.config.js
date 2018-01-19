@@ -17,6 +17,8 @@ var config = require('./webpack.config.js')
   config.plugins =  [
     new webpack.HotModuleReplacementPlugin(),
     new BundleTracker({path: __dirname, filename: './webpack-stats.json'}),
+    // shows which modules were changed
+    new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ]
 

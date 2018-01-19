@@ -1,9 +1,12 @@
 import React from 'react'
-import { PageHeader } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
 
 const App = () => (
   <div>
-    <PageHeader>Hello World <small>React bootstrap works</small></PageHeader>
+    <Jumbotron>
+      <h1>Hello World</h1>
+      <p>You can edit me and i will hot reload.</p>
+    </Jumbotron>
   </div>
 )
 
