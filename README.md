@@ -9,7 +9,7 @@ Find an adoptable cat that suits your needs
 2. Install frontend dependencies
     `$ npm install`
 
-3. Create environment variable for your `SECRET_KEY`
+3. Create environment variables for your `SECRET_KEY` and `PETFINDER_API_KEY`
 
 4. Initial frontend build
     `$ npm run build`
