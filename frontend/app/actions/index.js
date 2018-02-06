@@ -13,7 +13,7 @@ export function randomCatRequest() {
 export function randomCatSuccess(json) {
   return {
     type: RANDOM_CAT_SUCCESS,
-    randomCat: json
+    randomCat: json['petfinder']['pet']
   }
 }
 
@@ -37,7 +37,7 @@ function handleErrors(response) {
   return response
 }
 
-export function fetch_random_cat() {
+export function fetchRandomCat() {
   return function (dispatch) {
     dispatch(randomCatRequest)
     return fetch('/api/pet.getRandom?&output=full')
