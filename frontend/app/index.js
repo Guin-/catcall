@@ -7,18 +7,20 @@ import { createStore, applyMiddleware } from 'redux'
 import { apiMiddleware } from 'redux-api-middleware'
 import { Provider } from 'react-redux'
 import App from './app'
-import randomCat from './reducers/catReducer'
 import { fetchRandomCat } from './actions/catActions'
-
+import { fetchBreeds } from './actions/breedActions'
+import rootReducer from './reducers/index'
 
 const store = createStore(
-  randomCat,
+  rootReducer,
   applyMiddleware(
     apiMiddleware,
     thunkMiddleware
   )
 )
 
+store.dispatch(fetchBreeds())
+  .then(() => console.log(store.getState()))
 store.dispatch(fetchRandomCat())
   .then(() => console.log(store.getState()))
 
