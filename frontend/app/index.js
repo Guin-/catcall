@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import App from './app'
 import { fetchRandomCat } from './actions/catActions'
 import { fetchBreeds } from './actions/breedActions'
+import {fetchCatDetail } from './actions/catDetailActions'
 import rootReducer from './reducers/index'
 
 const store = createStore(
@@ -19,9 +20,9 @@ const store = createStore(
   )
 )
 
-store.dispatch(fetchBreeds())
-  .then(() => console.log(store.getState()))
-store.dispatch(fetchRandomCat())
+store.dispatch(fetchCatDetail(31555507))
+//store.dispatch(fetchBreeds())
+//store.dispatch(fetchRandomCat())
   .then(() => console.log(store.getState()))
 
 render(
