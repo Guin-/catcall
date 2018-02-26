@@ -6,6 +6,7 @@ import thunkMiddleware from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
 import { apiMiddleware } from 'redux-api-middleware'
 import { Provider } from 'react-redux'
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from './app'
 import { fetchRandomCat } from './actions/catActions'
 import { fetchBreeds } from './actions/breedActions'
@@ -23,7 +24,9 @@ const store = createStore(
 
 render(
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>,
   document.getElementById('react-app'))
 
