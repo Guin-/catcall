@@ -5,14 +5,14 @@ export const REQUEST = 'CAT_DETAIL_REQUEST'
 export const SUCCESS = 'CAT_DETAIL_SUCCESS'
 export const FAILURE = 'CAT_DETAIL_FAILURE'
 
-function cleanCatDetail(json) {
-  let result = _.forEach(json, function(value, parentKey) {
+function cleanCatDetail(pet) {
+  let result = _.forEach(pet, function(value, parentKey) {
                   _.forEach(value, function(value, key) {
                     if (_.isArray(value)) {
-                        json[parentKey] = _.map(value, '$t')
+                        pet[parentKey] = _.map(value, '$t')
                     }
                     else if (key=='$t') {
-                      json[parentKey] = value
+                      pet[parentKey] = value
                     }
                     else {
                       console.log( key, value)
@@ -34,7 +34,7 @@ export function fetchCatDetail(id) {
           type: SUCCESS,
           payload: (action, state, res) => {
             return res.json().then(json => json['petfinder']['pet'])
-              .then(json => cleanCatDetail(json))
+              .then(pet => cleanCatDetail(pet))
           }
         },
         FAILURE
