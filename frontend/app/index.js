@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import App from './app'
 import { fetchRandomCat } from './actions/catActions'
 import { fetchBreeds } from './actions/breedActions'
-import {fetchCatDetail } from './actions/catDetailActions'
+import { fetchCatDetail } from './actions/catDetailActions'
 import rootReducer from './reducers/index'
 
 const store = createStore(
