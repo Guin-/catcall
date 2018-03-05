@@ -11,11 +11,12 @@ function cleanCatDetail(pet) {
                     if (_.isArray(value)) {
                         pet[parentKey] = _.map(value, '$t')
                     }
-                    else if (key=='$t') {
+                    else if (key==='$t') {
                       pet[parentKey] = value
                     }
                     else {
-                      console.log( key, value)
+                       pet[key] = value['$t'] || value
+                       delete pet[parentKey]
                     }
                   })
                 })
