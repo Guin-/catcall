@@ -13,6 +13,7 @@ import { fetchBreeds } from './actions/breedActions'
 import { fetchCatDetail } from './actions/catDetailActions'
 import { fetchCatList } from './actions/catListActions'
 import rootReducer from './reducers/index'
+import '../app/styles/main.css'
 
 const store = createStore(
   rootReducer,
