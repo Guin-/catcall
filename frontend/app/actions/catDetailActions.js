@@ -5,7 +5,7 @@ export const REQUEST = 'CAT_DETAIL_REQUEST'
 export const SUCCESS = 'CAT_DETAIL_SUCCESS'
 export const FAILURE = 'CAT_DETAIL_FAILURE'
 
-function cleanCatDetail(pet) {
+export function cleanCatData(pet) {
   let result = _.forEach(pet, function(value, parentKey) {
                   _.forEach(value, function(value, key) {
                     if (_.isArray(value)) {
@@ -35,7 +35,7 @@ export function fetchCatDetail(id) {
           type: SUCCESS,
           payload: (action, state, res) => {
             return res.json().then(json => json['petfinder']['pet'])
-              .then(pet => cleanCatDetail(pet))
+              .then(pet => cleanCatData(pet))
           }
         },
         FAILURE

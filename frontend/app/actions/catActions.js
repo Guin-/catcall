@@ -1,4 +1,5 @@
 import { RSAA } from 'redux-api-middleware'
+import { cleanCatData } from '../actions/catDetailActions'
 
 export const REQUEST = 'RANDOM_CAT_REQUEST'
 export const SUCCESS = 'RANDOM_CAT_SUCCESS'
@@ -15,6 +16,7 @@ export function fetchRandomCat() {
           type: SUCCESS,
           payload: (action, state, res) => {
             return res.json().then(json => json['petfinder']['pet'])
+              .then(pet => cleanCatData(pet))
           }
         },
         FAILURE
