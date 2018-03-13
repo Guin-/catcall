@@ -7,6 +7,6 @@ import catList from './catListReducer'
 export default combineReducers({
   randomCat: randomCat,
   breeds: breedReducer,
-  catDetail: catDetail
+  catDetail: catDetail,
   catList: catList
 })
