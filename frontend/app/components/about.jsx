@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = () => (
-  <div>
+  <div className='about'>
     <p> I am the about component </p>
   </div>
 )
