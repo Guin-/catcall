@@ -24,6 +24,8 @@ const store = createStore(
 
 store.dispatch(fetchRandomCat())
   .then(() => console.log(store.getState()))
+store.dispatch(fetchCatList(10304))
+  .then(() => console.log(store.getState()))
 
 render(
     <Provider store={store}>
