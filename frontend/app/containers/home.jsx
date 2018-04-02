@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Grid, Col, Row } from 'react-bootstrap'
 import LocationForm from '../components/locationForm'
 import { fetchCatList } from '../actions/catListActions'
 
@@ -24,7 +23,6 @@ class Home extends React.Component {
 
   submitLocationForm(event) {
     event.preventDefault()
-    console.log('onSubmit function runs', this.state.zipcode)
     const { dispatch } = this.props
     if (this.getValidationState() === 'success') {
       return (
