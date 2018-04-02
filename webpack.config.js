@@ -32,11 +32,14 @@ module.exports = {
       { test: /\.css$/,
         loaders: ['style-loader', 'css-loader']
       },
-      { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-        loader: 'file-loader',
+      { test: /\.(png|jpg|jpeg)$/,
+        loader: 'url-loader',
         options: {
-          publicPath: 'static/'
-          }
+          name: '[name]-[ext]'
+        }
+      },
+      { test: /\.(svg|woff|woff2|ttf|eot)$/,
+        loader: 'file-loader',
       }
     ]
   },

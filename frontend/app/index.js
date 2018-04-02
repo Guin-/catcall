@@ -23,11 +23,6 @@ const store = createStore(
   )
 )
 
-store.dispatch(fetchRandomCat())
-  .then(() => console.log(store.getState()))
-store.dispatch(fetchCatList(10304))
-  .then(() => console.log(store.getState()))
-
 render(
     <Provider store={store}>
       <Router>
@@ -37,3 +32,4 @@ render(
   document.getElementById('react-app'))
 
 module.hot.accept()
+
