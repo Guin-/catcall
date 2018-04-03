@@ -1,8 +1,31 @@
-body {
-    padding-top: 70px;
-    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+/* Required padding for .navbar-fixed-top is 50px. Add to top level container div if needed.
+ * Remove if using .navbar-static-top. Change if height of navigation changes. */
+
+
+/* LANDING PAGE */
+
+.viewport-background {
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../../static/curious_cat-1600x900.jpg');
+    background-color: #000000;
 }
 
+.search-section {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+/* CAT LIST PAGE */
+.cat-list {
+    padding: 70px;
+}
+
+/* ABOUT PAGE */
+
 .about {
+    padding: 70px;
     text-align: center;
 }
