@@ -23,6 +23,18 @@
     padding: 70px;
 }
 
+.cat-card {
+    display: inline-block;
+    width: 33%;
+    height: 33%;
+    padding: 10px;
+}
+
+.cat-card-image {
+    margin: auto;
+    object-fit: cover;
+}
+
 /* ABOUT PAGE */
 
 .about {

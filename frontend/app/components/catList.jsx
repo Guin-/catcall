@@ -1,5 +1,6 @@
 import React from 'react'
 import CatCard from './catCard'
+import { Grid } from 'react-bootstrap'
 
 class CatList extends React.Component {
   constructor(props) {
@@ -8,20 +9,15 @@ class CatList extends React.Component {
 
   render() {
     const cats = this.props.data
-    console.log(cats)
     const catItems = cats.map((cat, id) => {
       return(
-        <CatCard name={cat.name} key={cat.id}>
-          <p>{cat.age}</p>
-          <p>{cat.breed}</p>
-          <p>{cat.size}</p>
-        </CatCard>
+        <CatCard cat={cat} key={cat.id} />
       )
     })
     return (
-      <div>
+      <Grid>
         {catItems}
-      </div>
+      </Grid>
     )
   }
 }
