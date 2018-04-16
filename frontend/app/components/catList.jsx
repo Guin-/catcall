@@ -1,6 +1,6 @@
 import React from 'react'
 import CatCard from './catCard'
-import { Grid } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 
 class CatList extends React.Component {
   constructor(props) {
@@ -16,7 +16,9 @@ class CatList extends React.Component {
     })
     return (
       <Grid>
-        {catItems}
+        <Row>
+          {catItems}
+        </Row>
       </Grid>
     )
   }

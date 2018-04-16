@@ -11,7 +11,6 @@ class ListContainer extends React.Component {
     const {catList} = this.props
     return (
       <div className='list-container'>
-        <p>I am the list container</p>
         <CatList data={catList}/>
       </div>
     )

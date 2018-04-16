@@ -1,5 +1,6 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+import { Col, Image } from 'react-bootstrap'
+import image_not_available  from '../../static/image_not_available.png'
 
 class CatCard extends React.Component {
   constructor(props) {
@@ -9,17 +10,21 @@ class CatCard extends React.Component {
   render() {
     const { cat } = this.props
     return (
-      <div className="cat-card">
-        <div>
-          <img
-            src={cat.photos.photo[3].$t}
-            className= "cat-card-image"
-          />
+      <Col xs={10} xsOffset={1} sm={8} smOffset={2} md={4} mdOffset={0} lg={4} lgOffset={0}>
+        <div className="cat-card">
+          <div className="image-container">
+            <Image
+              src={ cat.photos ? cat.photos.photo[3].$t : image_not_available }
+              className= "cat-card-image"
+            />
+          </div>
+          <div className='info-container'>
+            <h3>{cat.name}</h3>
+            <h4>{cat.age} {cat.size === 'L' ? 'Large' : cat.size === 'M' ? 'Medium' : 'Small' } {cat.sex === 'M' ? 'Male' : 'Female'}</h4>
+            <h4>{cat.breed}</h4>
+          </div>
         </div>
-        <h2>{cat.name}</h2>
-        <h3>{cat.age} | {cat.sex} | {cat.size}</h3>
-        <h4>{cat.breed}</h4>
-      </div>
+      </Col>
     )
   }
 }
