@@ -19,6 +19,7 @@
 }
 
 /* CAT LIST PAGE */
+
 .list-container {
     padding: 70px 0;
     background-color: #000;
@@ -28,9 +29,9 @@
     margin: 30px 10px;
     box-shadow: 0 3px 4px 0 #777;
     border-radius: 10px;
-    height:375px;
+    height: 375px;
     text-align: center;
-    background-color:#FFF;
+    background-color: #FFF;
 }
 
 .cat-card:hover {
@@ -45,7 +46,7 @@
 .cat-card-image {
     margin: auto;
     border-radius: 10px 10px 0 0;
-    height:100%;
+    height: 100%;
     width: 100%;
     object-fit: fill;
 }
@@ -60,3 +61,4 @@ h3 {
     padding: 70px;
     text-align: center;
 }
+
