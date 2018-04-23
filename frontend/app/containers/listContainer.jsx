@@ -8,7 +8,7 @@ class ListContainer extends React.Component {
   }
 
   render() {
-    const {catList} = this.props
+    const { catList } = this.props
     return (
       <div className='list-container'>
         <CatList data={catList}/>

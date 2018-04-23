@@ -51,6 +51,11 @@
     object-fit: fill;
 }
 
+.info-container {
+    color: #000;
+    text-decoration: None;
+}
+
 h3 {
     font-size: 22px;
 }
@@ -62,3 +67,9 @@ h3 {
     text-align: center;
 }
 
+/* DETAIL PAGE */ 
+
+.detail {
+    padding: 70px;
+    text-align: center;
+}
