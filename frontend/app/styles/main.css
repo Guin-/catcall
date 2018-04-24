@@ -9,7 +9,7 @@
     height: 100vh;
     background-size: cover;
     background-image: url('../../static/curious_cat-1600x900.jpg');
-    background-color: #000000;
+    background-color: #000;
 }
 
 .search-section {
@@ -19,13 +19,57 @@
 }
 
 /* CAT LIST PAGE */
-.cat-list {
-    padding: 70px;
+
+.list-container {
+    padding: 70px 0;
+    background-color: #000;
+}
+
+.cat-card {
+    margin: 30px 10px;
+    box-shadow: 0 3px 4px 0 #777;
+    border-radius: 10px;
+    height: 375px;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.cat-card:hover {
+    opacity: 0.5;
+}
+
+.image-container {
+    height: 65%;
+    background-color: #000;
+}
+
+.cat-card-image {
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.info-container {
+    color: #000;
+    text-decoration: None;
+}
+
+h3 {
+    font-size: 22px;
 }
 
 /* ABOUT PAGE */
 
 .about {
+    padding: 70px;
+    text-align: center;
+}
+
+/* DETAIL PAGE */ 
+
+.detail {
     padding: 70px;
     text-align: center;
 }
