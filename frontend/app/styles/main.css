@@ -56,6 +56,10 @@
     text-decoration: None;
 }
 
+.loading {
+    text-align: center;
+}
+
 h3 {
     font-size: 22px;
 }
