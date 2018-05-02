@@ -19,7 +19,8 @@ function catList(state = initialState, action) {
     case SUCCESS:
       return Object.assign({}, state, {
         isFetching: false,
-        catList: action.payload
+        // concat data from each new fetch to the catlist state instead of replacing it
+        catList: [ ...state.catList, ...action.payload ],
     })
     default:
       return state
