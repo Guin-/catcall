@@ -39,10 +39,15 @@ class CatList extends React.Component {
         )
     })
     const rows = mobileRows.reduce((row, element, index)=>{
+        // group cat card elements into arrays of 3 cat card items
+        // ex: [[CatCard1, CatCard2, CatCard3], [CatCard4, CatCard5, CatCard6]]
         index % groupSize === 0 && row.push([]);
         row[row.length - 1].push(element);
         return row
     }, []).map((rowContent, index) => {
+      // surround every group with a bootstrap row
+      // use the index as a key for the row
+      // rows are used as elements for infinite scroll on large devices
       return <div className="row" key={index}>{rowContent}</div>
     })
 

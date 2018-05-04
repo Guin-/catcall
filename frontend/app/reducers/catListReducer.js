@@ -1,4 +1,4 @@
-import { REQUEST, SUCCESS, FAILURE } from '../actions/catListActions'
+import { REQUEST, SUCCESS, FAILURE, CLEAR } from '../actions/catListActions'
 
 const initialState= {
   isFetching: false,
@@ -16,11 +16,15 @@ function catList(state = initialState, action) {
         isFetching: false,
         error: action.payload
     })
+    case CLEAR:
+      return Object.assign({}, state, {
+       catList: []
+    })
     case SUCCESS:
       return Object.assign({}, state, {
         isFetching: false,
         // concat data from each new fetch to the catlist state instead of replacing it
-        catList: [ ...state.catList, ...action.payload ],
+        catList: [ ...state.catList, ...action.payload ]
     })
     default:
       return state
