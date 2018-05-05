@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import LocationForm from '../components/locationForm'
-import { fetchCatList } from '../actions/catListActions'
+import { fetchCatList, clearCatList } from '../actions/catListActions'
+import { persistZip } from '../actions/persistZip'
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,7 +27,9 @@ class Home extends React.Component {
     const { dispatch } = this.props
     if (this.getValidationState() === 'success') {
       return (
-      dispatch(fetchCatList(this.state.zipcode)),
+      dispatch(clearCatList()),
+      dispatch(fetchCatList(this.state.zipcode, 0)),
+      dispatch(persistZip(this.state.zipcode)),
       this.props.history.push('/cats')
       )
     }

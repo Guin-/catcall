@@ -4,11 +4,12 @@ import { cleanCatData } from '../actions/catDetailActions'
 export const REQUEST = 'CAT_LIST_REQUEST'
 export const SUCCESS = 'CAT_LIST_SUCCESS'
 export const FAILURE = 'CAT_LIST_FAILURE'
+export const CLEAR = 'CAT_LIST_CLEAR'
 
-export function fetchCatList(location) {
+export function fetchCatList(location, offset) {
   return {
     [RSAA]: {
-      endpoint: '/api/pet.find?&location=' + location,
+      endpoint: '/api/pet.find?&location=' + location + '&offset=' +  offset,
       method: 'GET',
       types: [
         REQUEST,
@@ -23,4 +24,8 @@ export function fetchCatList(location) {
       ]
     }
   }
+}
+
+export function clearCatList(){
+  return {type: CLEAR}
 }
