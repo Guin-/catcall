@@ -18,8 +18,8 @@ export function cleanCatData(pet) {
         cleanData[parentKey] = pet[parentKey]
       }
       else {
-         pet[key] = value['$t'] || value
-         cleanData[key] = pet[key]
+        pet[key] = value['$t'] || value
+        cleanData[key] = pet[key]
       }
     })
   })
@@ -45,3 +45,4 @@ export function fetchCatDetail(id) {
     }
   }
 }
+

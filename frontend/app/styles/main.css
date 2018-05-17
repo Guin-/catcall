@@ -1,6 +1,9 @@
 /* Required padding for .navbar-fixed-top is 50px. Add to top level container div if needed.
  * Remove if using .navbar-static-top. Change if height of navigation changes. */
-
+body {
+    background-color: #000 !important;
+    padding: 70px 0;
+}
 
 /* LANDING PAGE */
 
@@ -19,11 +22,6 @@
 }
 
 /* CAT LIST PAGE */
-
-.list-container {
-    padding: 70px 0;
-    background-color: #000;
-}
 
 .cat-card {
     margin: 30px 10px;
@@ -67,13 +65,74 @@ h3 {
 /* ABOUT PAGE */
 
 .about {
-    padding: 70px;
+    text-align: center;
+    color: #FFF;
+}
+
+/* DETAIL PAGE */
+
+.cat-detail-container {
+    height: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    color:#e4ebf5;
+}
+
+.detail-card-image {
+    margin: auto;
+    border-radius: 10px;
+    height: 500px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.cat-detail-header {
     text-align: center;
 }
 
-/* DETAIL PAGE */ 
 
-.detail {
-    padding: 70px;
-    text-align: center;
+.icon-item {
+    display: block;
+    padding: 10px 10px;
+    font: 22px bold;
 }
+
+.icon-image {
+    padding: 10px 20px;
+}
+
+.icon-image-container {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+.icon-item-data {
+    display: inline-block;
+    padding: 10px;
+    width: 60%;
+    white-space: normal;
+    vertical-align: middle;
+}
+
+
+.inverted {
+    filter: invert(100%);
+}
+
+#address {
+    display: block;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .icon-item {
+        text-align: center;
+    }
+
+    .icon-item-data {
+     display: block;
+     width: 100%;
+    }
+}
+
+
