@@ -27,18 +27,18 @@ class ShelterDetail extends React.Component {
         <div className="cat-detail-container">
           <h1 className="cat-detail-header">Contact</h1>
             <div className="icon-item">
-              <img className="icon-image" src={email}/>
+              <img className="icon-image" src={email} alt="email"/>
               <span className="icon-item-data">{cat.email || 'N/A'}</span>
             </div>
             <div className="icon-item">
-              <img className="icon-image" src={phone}/>
+              <img className="icon-image" src={phone} alt="phone"/>
               <span className="icon-item-data">{cat.phone || 'N/A'}</span>
             </div>
             <div className="icon-item">
-              <img className="icon-image" src={location}/>
+              <img className="icon-image" src={location} alt="location"/>
               <div className="icon-item-data">
-                <p id="address">{cat.address1 || 'N/A' && cat.address2}</p>
-                <p id="address">{cat.city}, {cat.state} {cat.zip}</p>
+                <p className="address">{cat.address1 || 'N/A' && cat.address2}</p>
+                <p className="address">{cat.city}, {cat.state} {cat.zip}</p>
               </div>
             </div>
         </div>
