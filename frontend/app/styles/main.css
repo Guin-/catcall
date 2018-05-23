@@ -56,6 +56,17 @@ body {
 
 .loading {
     text-align: center;
+    display: flex;
+    height:100vh
+}
+
+.loading-container {
+    margin: auto;
+}
+
+.loading-gif {
+    border-radius: 50%;
+    width: 300px;
 }
 
 h3 {
