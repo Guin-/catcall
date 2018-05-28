@@ -27,8 +27,6 @@ class Home extends React.Component {
     const { dispatch } = this.props
     if (this.getValidationState() === 'success') {
       return (
-      dispatch(clearCatList()),
-      dispatch(fetchCatList(this.state.zipcode, 0)),
       dispatch(persistZip(this.state.zipcode)),
       this.props.history.push('/cats')
       )

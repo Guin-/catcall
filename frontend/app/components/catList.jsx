@@ -1,9 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { Grid, Row } from 'react-bootstrap'
 import Infinite from 'react-infinite'
 import Media from 'react-media'
-import { fetchCatList } from '../actions/catListActions'
 import CatCard from './catCard'
 import Loading from '../components/loading'
 
@@ -17,7 +15,7 @@ class CatList extends React.Component {
     }
   }
 
-  handleInfiniteLoad(){
+  handleInfiniteLoad() {
     this.setState({isInfiniteLoading: true})
     setTimeout(() => {
       this.setState({ offset : this.state.offset + 30,
@@ -81,16 +79,5 @@ class CatList extends React.Component {
   }
 }
 
+export default CatList;
 
-const mapStateToProps = (state) => ({
-  zipcode: state.zipcode.zipcode
-})
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchCatList(zipcode, offset) {
-      dispatch(fetchCatList(zipcode, offset))
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(CatList);
