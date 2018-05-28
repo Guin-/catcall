@@ -25,7 +25,7 @@ class DetailContainer extends React.Component {
       )
     }
     return (
-      <Grid>
+      <Grid className="view">
         <Row>
           <CatIntro cat={catDetail} />
         </Row>

@@ -12,8 +12,8 @@ class ShelterDetail extends React.Component {
   fillEmptyValues() {
     const {cat} = this.props
     _.forEach(cat, function(value, key) {
-      if(value.length == undefined && key != 'photos'){
-        cat[key] = false
+      if(value.length === undefined && key !== 'photos'){
+        delete cat[key]
       }
     })
     return cat
