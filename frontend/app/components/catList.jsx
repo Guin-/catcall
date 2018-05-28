@@ -1,10 +1,11 @@
 import React from 'react'
-import CatCard from './catCard'
 import { connect } from 'react-redux'
 import { Grid, Row } from 'react-bootstrap'
 import Infinite from 'react-infinite'
 import Media from 'react-media'
 import { fetchCatList } from '../actions/catListActions'
+import CatCard from './catCard'
+import Loading from '../components/loading'
 
 class CatList extends React.Component {
   constructor(props) {
@@ -26,10 +27,9 @@ class CatList extends React.Component {
   }
 
   elementInfiniteLoad() {
-    return <div className="loading">
-            <h3>Loading...</h3>
-           </div>;
-}
+    return (<Loading />)
+  }
+
   render() {
     const cats = this.props.data
     const groupSize = 3

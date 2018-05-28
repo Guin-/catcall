@@ -10,7 +10,7 @@ class ListContainer extends React.Component {
   render() {
     const { catList } = this.props
     return (
-      <div className='list-container'>
+      <div className="view">
         <CatList data={catList}/>
       </div>
     )

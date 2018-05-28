@@ -1,7 +1,11 @@
 import React from 'react'
+import { Grid, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { fetchCatDetail } from '../actions/catDetailActions'
+import Loading from '../components/loading'
 import CatDetail from '../components/catDetail'
+import CatIntro from '../components/catIntro'
+import ShelterDetail from '../components/shelterDetail'
 
 class DetailContainer extends React.Component {
   constructor(props) {
@@ -14,17 +18,28 @@ class DetailContainer extends React.Component {
   }
 
   render() {
-    const { catDetail } = this.props
+    const { catDetail, isFetching } = this.props
+    if (isFetching) {
+      return(
+        <Loading />
+      )
+    }
     return (
-      <div>
-        <CatDetail cat={catDetail}/>
-      </div>
+      <Grid className="view">
+        <Row>
+          <CatIntro cat={catDetail} />
+        </Row>
+        <Row>
+          <CatDetail cat={catDetail}/>
+          <ShelterDetail cat={catDetail}/>
+        </Row>
+      </Grid>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  catList: state.catList.catList,
+  isFetching: state.catDetail.isFetching,
   catDetail: state.catDetail.catDetail
 })
 
