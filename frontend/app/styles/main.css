@@ -150,4 +150,14 @@ h3 {
     }
 }
 
+@media only screen and (max-device-width: 1024px) {
+    .loading {
+        display: block;
+    }
+
+    .loading-container {
+        background-color: #000;
+        padding: 20px;
+    }
+}
 
