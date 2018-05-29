@@ -25,7 +25,11 @@ class CatList extends React.Component {
   }
 
   elementInfiniteLoad() {
-    return (<Loading />)
+    return (
+      <Row>
+        <Loading />
+      </Row>
+    )
   }
 
   render() {
