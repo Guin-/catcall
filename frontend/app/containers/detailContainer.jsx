@@ -6,6 +6,7 @@ import Loading from '../components/loading'
 import CatDetail from '../components/catDetail'
 import CatIntro from '../components/catIntro'
 import ShelterDetail from '../components/shelterDetail'
+import ErrorAlert from '../components/errorAlert'
 
 class DetailContainer extends React.Component {
   constructor(props) {
@@ -18,10 +19,15 @@ class DetailContainer extends React.Component {
   }
 
   render() {
-    const { catDetail, isFetching } = this.props
+    const { catDetail, error, isFetching } = this.props
     if (isFetching) {
       return(
         <Loading />
+      )
+    }
+    else if (error) {
+      return (
+        <ErrorAlert errorMessage={error}/>
       )
     }
     return (
@@ -40,6 +46,7 @@ class DetailContainer extends React.Component {
 
 const mapStateToProps = (state) => ({
   isFetching: state.catDetail.isFetching,
+  error: state.catDetail.error,
   catDetail: state.catDetail.catDetail
 })
 
