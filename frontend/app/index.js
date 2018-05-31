@@ -8,6 +8,7 @@ import { apiMiddleware } from 'redux-api-middleware'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './app'
+import ScrollToTop from '../app/components/scrollToTop'
 import { fetchBreeds } from './actions/breedActions'
 import { fetchCatDetail } from './actions/catDetailActions'
 import { fetchCatList } from './actions/catListActions'
@@ -26,7 +27,9 @@ const store = createStore(
 render(
     <Provider store={store}>
       <Router>
-        <App />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
       </Router>
     </Provider>,
   document.getElementById('react-app'))
