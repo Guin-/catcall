@@ -4,6 +4,7 @@ import { forEach } from 'lodash'
 export const REQUEST = 'CAT_DETAIL_REQUEST'
 export const SUCCESS = 'CAT_DETAIL_SUCCESS'
 export const FAILURE = 'CAT_DETAIL_FAILURE'
+export const CLEAR = 'CAT_DETAIL_CLEAR'
 
 export function cleanCatData(pet) {
   let cleanData = {}
@@ -46,3 +47,7 @@ export function fetchCatDetail(id) {
   }
 }
 
+
+export function clearCatDetail(){
+  return {type: CLEAR}
+}

@@ -1,4 +1,4 @@
-import { REQUEST, SUCCESS, FAILURE } from '../actions/catDetailActions'
+import { REQUEST, SUCCESS, FAILURE, CLEAR } from '../actions/catDetailActions'
 import { CLEAR_ERROR } from '../actions/clearError'
 
 const initialState= {
@@ -21,6 +21,10 @@ function catDetail(state = initialState, action) {
     case CLEAR_ERROR:
       return Object.assign({}, state, {
        error: null
+    })
+    case CLEAR:
+      return Object.assign({}, state, {
+       catList: []
     })
     case SUCCESS:
       return Object.assign({}, state, {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { fetchCatDetail } from '../actions/catDetailActions'
+import { fetchCatDetail, clearCatDetail } from '../actions/catDetailActions'
 import Loading from '../components/loading'
 import CatDetail from '../components/catDetail'
 import CatIntro from '../components/catIntro'
@@ -14,8 +14,9 @@ class DetailContainer extends React.Component {
   }
 
   componentDidMount() {
-    let id = this.props.match.params.id;
-    this.props.fetchCatDetail(id);
+    let id = this.props.match.params.id
+    this.props.clearCatDetail()
+    this.props.fetchCatDetail(id)
   }
 
   render() {
@@ -50,14 +51,10 @@ const mapStateToProps = (state) => ({
   catDetail: state.catDetail.catDetail
 })
 
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchCatDetail(id) {
-      dispatch(fetchCatDetail(id))
-    }
+const mapDispatchToProps = {
+    fetchCatDetail,
+    clearCatDetail
   }
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailContainer);
 
