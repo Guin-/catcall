@@ -1,8 +1,10 @@
 import { REQUEST, SUCCESS, FAILURE, CLEAR } from '../actions/catListActions'
+import { CLEAR_ERROR } from '../actions/clearError'
 
 const initialState= {
   isFetching: false,
-  catList: []
+  catList: [],
+  error: null
 }
 
 function catList(state = initialState, action) {
@@ -15,6 +17,10 @@ function catList(state = initialState, action) {
       return Object.assign({}, state, {
         isFetching: false,
         error: action.payload
+    })
+    case CLEAR_ERROR:
+      return Object.assign({}, state, {
+       error: null
     })
     case CLEAR:
       return Object.assign({}, state, {

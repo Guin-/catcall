@@ -52,7 +52,8 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  catList : state.catList.catList
+  catList : state.catList.catList,
+  error: state.error.error
 })
 
 
