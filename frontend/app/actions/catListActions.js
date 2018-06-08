@@ -11,6 +11,25 @@ export function fetchCatList(location, offset) {
     [RSAA]: {
       endpoint: '/api/pet.find?&location=' + location + '&offset=' +  offset,
       method: 'GET',
+      fetch: async (endpoint) => {
+        let res = await fetch(endpoint)
+        if (res.status === 200) {
+          let json = await res.json()
+          return new Response(
+             JSON.stringify({
+              ...json
+             }),
+            {
+              // passed to success or failure based on status code
+              status: json.petfinder.header.status.code.$t === '100' ? 200 : 500,
+              statusText: json.petfinder.header.status.message.$t
+            }
+          )
+        }
+        else {
+          return res
+        }
+      },
       types: [
         REQUEST,
         {
@@ -29,3 +48,4 @@ export function fetchCatList(location, offset) {
 export function clearCatList(){
   return {type: CLEAR}
 }
+

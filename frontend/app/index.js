@@ -1,6 +1,7 @@
 require('bootstrap/dist/css/bootstrap.min.css');
 
 import React from 'react'
+import "babel-polyfill";
 import { render } from 'react-dom'
 import thunkMiddleware from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
