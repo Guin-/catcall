@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Media } from 'react-bootstrap'
 import email from '../../static/email.png'
 import phone from '../../static/phone.png'
-import location from '../../static/location.png'
+import address from '../../static/address.png'
 
 class ShelterDetail extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class ShelterDetail extends React.Component {
               <span className="icon-item-data">{cat.phone || 'N/A'}</span>
             </div>
             <div className="icon-item">
-              <img className="icon-image" src={location} alt="location"/>
+              <img className="icon-image" src={address} alt="address"/>
               <div className="icon-item-data">
                 <p className="address">{cat.address1 || 'N/A' && cat.address2}</p>
                 <p className="address">{cat.city}, {cat.state} {cat.zip}</p>
