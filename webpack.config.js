@@ -6,7 +6,7 @@ module.exports = {
   context: __dirname,
 
   // app import chain starts here
-  entry: './frontend/app/index',
+  entry: ['babel-polyfill','./frontend/app/index'],
 
   // location of written bundled files
   output: {

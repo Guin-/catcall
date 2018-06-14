@@ -32,6 +32,25 @@ export function fetchCatDetail(id) {
     [RSAA]: {
       endpoint: '/api/pet.get?&id=' + id + '&output=full',
       method: 'GET',
+      fetch: async (endpoint) => {
+        let res = await fetch(endpoint)
+        if (res.status === 200) {
+          let json = await res.json()
+          return new Response(
+             JSON.stringify({
+              ...json
+             }),
+            {
+              // passed to success or failure based on status code
+              status: json.petfinder.header.status.code.$t === '100' ? 200 : 404,
+              statusText: json.petfinder.header.status.message.$t
+            }
+          )
+        }
+        else {
+          return res
+        }
+      },
       types: [
         REQUEST,
         {
