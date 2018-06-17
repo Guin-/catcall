@@ -1,4 +1,4 @@
-from settings import PETFINDER_API_KEY
+from settings.base import PETFINDER_API_KEY
 from proxy.views import proxy_view
 
 def petfinder_view(request, path):
