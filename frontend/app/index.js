@@ -1,4 +1,5 @@
 require('bootstrap/dist/css/bootstrap.min.css');
+require('bootstrap/dist/fonts/glyphicons-halflings-regular.woff');
 
 import React from 'react'
 import "babel-polyfill";
