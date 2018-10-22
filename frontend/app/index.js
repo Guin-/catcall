@@ -1,4 +1,5 @@
 require('bootstrap/dist/css/bootstrap.min.css');
+require('bootstrap/dist/fonts/glyphicons-halflings-regular.woff');
 
 import React from 'react'
 import "babel-polyfill";
@@ -15,6 +16,7 @@ import { fetchCatDetail } from './actions/catDetailActions'
 import { fetchCatList } from './actions/catListActions'
 import { persistZip } from './actions/persistZip'
 import rootReducer from './reducers/index'
+import glyphicons from '../static/glyphicons-halfings-regular.woff'
 import '../app/styles/main.css'
 
 const store = createStore(
