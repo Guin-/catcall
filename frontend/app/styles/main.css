@@ -1,9 +1,29 @@
 /* Required padding for .navbar-fixed-top is 50px. Add to top level container div if needed.
  * Remove if using .navbar-static-top. Change if height of navigation changes. */
 
+/* BOOTSTRAP OVERRIDES */
+
+body p, body span, body h4{
+    font-family: Roboto, 'Lucida Grande', Tahoma, sans-serif;
+}
+
+body h1, body h2, body h3 {
+    font-family: 'Noto Sans', 'Lucida Grande', Tahoma, sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Noto Sans', 'Lucida Grande', Tahoma, sans-serif;
+}
+
+.navbar-nav>li {
+    font-family: Roboto, 'Lucida Grande', Tahoma, sans-serif;
+}
+
 #react-app {
     background-color: #000;
 }
+
+/* GENERIC STYLES */
 
 .view {
     padding: 70px 0px;
@@ -12,6 +32,7 @@
 .error-view {
     height: 100vh;
 }
+
 /* LANDING PAGE */
 
 .viewport-background {
