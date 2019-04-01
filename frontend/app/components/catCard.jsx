@@ -12,7 +12,7 @@ class CatCard extends React.Component {
     const { cat } = this.props
     return (
       <Col xs={10} xsOffset={1} sm={8} smOffset={2} md={4} mdOffset={0} lg={4} lgOffset={0}>
-        <Link to={`cats/${cat.id}`}>
+        <Link to={`cats/${cat.id}`} className="cat-card-link">
           <div className="cat-card">
             <div className="image-container">
               <Image

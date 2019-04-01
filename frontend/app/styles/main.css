@@ -64,6 +64,10 @@ body h1, body h2, body h3 {
     opacity: 0.5;
 }
 
+.cat-card-link:hover {
+    text-decoration: None;
+}
+
 .image-container {
     height: 65%;
     background-color: #000;
@@ -79,7 +83,6 @@ body h1, body h2, body h3 {
 
 .info-container {
     color: #000;
-    text-decoration: None;
 }
 
 .loading {
