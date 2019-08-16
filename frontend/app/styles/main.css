@@ -49,6 +49,17 @@ body h1, body h2, body h3 {
     color: #ccc;
 }
 
+.submit-button {
+    background-color: #3C3731;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
 /* CAT LIST PAGE */
 
 .cat-card {

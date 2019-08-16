@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, FormGroup, HelpBlock, Button } from 'react-bootstrap'
+import { FormControl, FormGroup, HelpBlock } from 'react-bootstrap'
 
 class LocationForm extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class LocationForm extends React.Component {
             <HelpBlock>Please enter a valid zip code</HelpBlock>
            : null }
           </FormGroup>
-          <Button type="submit">Find A Cat</Button>
+          <button type="submit" className="submit-button">Find A Cat</button>
         </form>
       </div>
     )
