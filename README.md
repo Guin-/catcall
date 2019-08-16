@@ -20,7 +20,7 @@ Find an adoptable cat that suits your needs
    `$ ./manage.py runserver`
 
 2. From the root directory run
-    `$ npm run watch`
+    `$ npm run start`
 
 ## Testing
 
