@@ -20,7 +20,7 @@ class About extends React.Component {
                 <p>
                   Cat Call is a web app that helps users search for adoptable cats by their location.
                   It provides important information regarding each cat and the contact information for the shelter so that you may move forward with the adoption process.
-                  All data is provided by the Petfinder API.
+                  All data is provided by the Petfinder API. Background image by <a href="https://unsplash.com/@bielmorro">Biel Morro</a>.
                   It was built with Django, React, Redux, and React Bootstrap.
                 </p>
               </div>
