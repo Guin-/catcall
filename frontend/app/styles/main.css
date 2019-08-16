@@ -26,7 +26,7 @@ body h1, body h2, body h3 {
 /* GENERIC STYLES */
 
 .view {
-    padding: 70px 0px;
+    padding: 70px 0 0 0;
 }
 
 .error-view {
@@ -39,7 +39,7 @@ body h1, body h2, body h3 {
     display: flex;
     height: 100vh;
     background-size: cover;
-    background-image: url('../../static/curious_cat-1600x900.jpg');
+    background-image: url('../../static/greencatlandscape.jpeg');
     background-color: #000;
 }
 
@@ -54,6 +54,7 @@ body h1, body h2, body h3 {
 .cat-card {
     margin: 30px 10px;
     box-shadow: 0 3px 4px 0 #777;
+    box-shadow: 0 4px 20px 0 #969278;
     border-radius: 10px;
     height: 375px;
     text-align: center;
@@ -181,7 +182,12 @@ h3 {
      display: block;
      width: 100%;
     }
+
+    .viewport-background {
+        background-image: url('../../static/greencat.jpeg');
+    }
 }
+
 
 @media only screen and (max-device-width: 1024px) {
     .loading {
@@ -195,6 +201,10 @@ h3 {
 
     .about {
         height: 100%;
+    }
+
+    .viewport-background {
+        background-image: url('../../static/greencat.jpeg');
     }
 }
 
