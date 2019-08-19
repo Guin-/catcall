@@ -22,7 +22,7 @@ class ListContainer extends React.Component {
       )
     }
     return (
-      <div className="view">
+      <div className="view list-view">
         <CatList data={catList}
                 zipcode={zipcode}
                 fetchCatList={fetchCatList}
