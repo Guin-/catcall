@@ -15,8 +15,11 @@ class DetailContainer extends React.Component {
 
   componentDidMount() {
     let id = this.props.match.params.id
-    this.props.clearCatDetail()
     this.props.fetchCatDetail(id)
+  }
+
+  componentWillUnmount() {
+    this.props.clearCatDetail()
   }
 
   render() {

@@ -24,7 +24,7 @@ function catDetail(state = initialState, action) {
     })
     case CLEAR:
       return Object.assign({}, state, {
-       catList: []
+        catDetail: {},
     })
     case SUCCESS:
       return Object.assign({}, state, {
