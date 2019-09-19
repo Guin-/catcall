@@ -30,6 +30,7 @@ def get_env_variable(var_name):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_env_variable('SECRET_KEY')
 PETFINDER_API_KEY = get_env_variable('PETFINDER_API_KEY')
+PETFINDER_SECRET = get_env_variable('PETFINDER_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
