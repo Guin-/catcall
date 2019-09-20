@@ -10,7 +10,7 @@ class ListContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCatList(this.props.zipcode, 0)
+    this.props.fetchCatList(this.props.zipcode, 1)
   }
 
   componentWillUnmount() {

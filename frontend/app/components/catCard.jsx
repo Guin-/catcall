@@ -16,14 +16,18 @@ class CatCard extends React.Component {
           <div className="cat-card">
             <div className="image-container">
               <Image
-                src={ cat.photos ? cat.photos.photo[3].$t : image_not_available }
+                src={ cat.photos.length >= 1 ? cat.photos[0]['small'] : image_not_available }
                 className= "cat-card-image"
               />
             </div>
             <div className='info-container'>
               <h3>{cat.name}</h3>
-              <h4>{cat.age} {cat.size === 'L' ? 'Large' : cat.size === 'M' ? 'Medium' : 'Small' } {cat.sex === 'M' ? 'Male' : 'Female'}</h4>
-              <h4>{cat.breed ? cat.breed : cat.breeds[0] + ' & ' + cat.breeds[1]}</h4>
+              <h4>{cat.age} {cat.size} {cat.gender}</h4>
+              <h4>
+              {cat.breeds['unkown'] ? 'unknown breed' :
+               cat.breeds['secondary'] ? cat.breeds['primary'] + ' & ' + cat.breeds['secondary']
+               : cat.breeds['primary']}
+               </h4>
             </div>
           </div>
         </Link>

@@ -10,7 +10,7 @@ class CatList extends React.Component {
     super(props)
     this.handleInfiniteLoad = this.handleInfiniteLoad.bind(this)
     this.state = {
-      offset: 0,
+      page: 1,
       isInfiniteLoading: false,
     }
   }
@@ -18,9 +18,9 @@ class CatList extends React.Component {
   handleInfiniteLoad() {
     this.setState({isInfiniteLoading: true})
     setTimeout(() => {
-      this.setState({ offset : this.state.offset + 30,
+      this.setState({ page : this.state.page + 1,
                       isInfiniteLoading: false}),
-      this.props.fetchCatList(this.props.zipcode, this.state.offset)
+      this.props.fetchCatList(this.props.zipcode, this.state.page)
     }, 2500)
   }
 
