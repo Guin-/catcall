@@ -23,21 +23,22 @@ class DetailContainer extends React.Component {
   }
 
   render() {
-    const { catDetail, error, isFetching } = this.props
-    if (isFetching) {
-      return(
-        <Loading />
-      )
-    }
-    else if (error) {
+    const { catDetail , error, isFetching } = this.props
+
+    if (!isFetching && error) {
       return (
         <ErrorAlert errorMessage={error}/>
+      )
+    }
+    else if ( isFetching || Object.entries(catDetail).length === 0  ) {
+      return(
+        <Loading />
       )
     }
     return (
       <Grid className="view">
         <Row>
-          <CatIntro cat={catDetail} />
+          <CatIntro cat={catDetail}/>
         </Row>
         <Row>
           <CatDetail cat={catDetail}/>
