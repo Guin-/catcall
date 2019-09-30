@@ -14,7 +14,7 @@ class CatIntro extends React.Component {
       <div>
         <Col xs={12} xsOffset={0} smOffset={1} mdOffset={1} lg={6} lgOffset={0}>
           <div className="cat-detail-container">
-            <img src={ cat.photos[0]['smail'] || image_not_available }
+            <img src={ cat.photos[0]['small'] || image_not_available }
               className="detail-card-image"
             />
           </div>
