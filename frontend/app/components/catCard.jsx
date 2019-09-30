@@ -24,7 +24,7 @@ class CatCard extends React.Component {
               <h3>{cat.name}</h3>
               <h4>{cat.age} {cat.size} {cat.gender}</h4>
               <h4>
-              {cat.breeds['unkown'] ? 'unknown breed' :
+              {cat.breeds['unknown'] ? 'unknown breed' :
                cat.breeds['secondary'] ? cat.breeds['primary'] + ' & ' + cat.breeds['secondary']
                : cat.breeds['primary']}
                </h4>

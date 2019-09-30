@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Media } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 import email from '../../static/email.png'
 import phone from '../../static/phone.png'
 import address from '../../static/address.png'
@@ -9,18 +9,7 @@ class ShelterDetail extends React.Component {
     super(props)
   }
 
-  fillEmptyValues() {
-    const {cat} = this.props
-    _.forEach(cat, function(value, key) {
-      if(value.length === undefined && key !== 'photos'){
-        delete cat[key]
-      }
-    })
-    return cat
-  }
-
   render() {
-  {this.fillEmptyValues()}
     const { cat } = this.props
     return (
       <Col xs={12} xsOffset={0} smOffset={1} mdOffset={1} lg={6} lgOffset={0}>
@@ -28,17 +17,18 @@ class ShelterDetail extends React.Component {
           <h1 className="cat-detail-header">Contact</h1>
             <div className="icon-item">
               <img className="icon-image" src={email} alt="email"/>
-              <span className="icon-item-data">{cat.email || 'N/A'}</span>
+              <span className="icon-item-data">{cat.contact ? cat.contact['email'] : 'N/A'}</span>
             </div>
             <div className="icon-item">
               <img className="icon-image" src={phone} alt="phone"/>
-              <span className="icon-item-data">{cat.phone || 'N/A'}</span>
+              <span className="icon-item-data">{cat.contact['phone'] || 'N/A'}</span>
             </div>
             <div className="icon-item">
               <img className="icon-image" src={address} alt="address"/>
               <div className="icon-item-data">
-                <p className="address">{cat.address1 || 'N/A' && cat.address2}</p>
-                <p className="address">{cat.city}, {cat.state} {cat.zip}</p>
+                <p className="address">{cat.contact.address['address1'] || 'N/A' && cat.contact.address['address2']}</p>
+                <p className="address">{cat.contact.address['city']} {cat.contact.address['state']} {cat.contact.address['postcode']}
+                </p>
               </div>
             </div>
         </div>
