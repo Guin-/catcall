@@ -16,7 +16,7 @@ class CatCard extends React.Component {
           <div className="cat-card">
             <div className="image-container">
               <Image
-                src={ cat.photos.length >= 1 ? cat.photos[0]['small'] : image_not_available }
+                src={ cat.photos.length >= 1 ? cat.photos[0]['medium'] : image_not_available }
                 className= "cat-card-image"
               />
             </div>
