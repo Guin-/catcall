@@ -1,5 +1,4 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
 
 class CatDetail extends React.Component {
   constructor(props) {
@@ -9,10 +8,9 @@ class CatDetail extends React.Component {
   render() {
     const { cat } = this.props
     const { attributes, environment, tags } = this.props.cat
-    let health = Object.keys(attributes).filter(key => attributes[key])
+    const health = Object.keys(attributes).filter(key => attributes[key])
     const okWith = Object.keys(environment).filter(key => environment[key])
     const notOkWith = Object.keys(environment).filter(key => !environment[key] == null  && !environment[key])
-//    health.forEach((key) => {key.replace(/_/g, ' ')})
     return (
         <div className="div3 area">
         <div className="div4 about-inner">
