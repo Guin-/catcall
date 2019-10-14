@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import { fetchCatDetail, clearCatDetail } from '../actions/catDetailActions'
 import Loading from '../components/loading'
 import CatDetail from '../components/catDetail'
-import CatIntro from '../components/catIntro'
 import ShelterDetail from '../components/shelterDetail'
 import ErrorAlert from '../components/errorAlert'
+import image_not_available  from '../../static/image_not_available.png'
 
 class DetailContainer extends React.Component {
   constructor(props) {
@@ -36,18 +36,19 @@ class DetailContainer extends React.Component {
       )
     }
     return (
-      <Grid className="view">
-        <Row>
-          <CatIntro cat={catDetail}/>
-        </Row>
-        <Row>
-          <CatDetail cat={catDetail}/>
-          <ShelterDetail cat={catDetail}/>
-        </Row>
-      </Grid>
+      <div className="parent">
+        <div className="div1 area">
+            <img src={ catDetail.photos.length >=1 ? catDetail.photos[0]['large'] : image_not_available }
+              className="detail-view-image"
+            />
+          </div>
+        <ShelterDetail cat={catDetail}/>
+        <CatDetail cat={catDetail}/>
+      </div>
     )
   }
 }
+
 
 const mapStateToProps = (state) => ({
   isFetching: state.catDetail.isFetching,
