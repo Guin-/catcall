@@ -8,7 +8,7 @@ export const CLEAR = 'CAT_LIST_CLEAR'
 export function fetchCatList(location, page) {
   return {
     [RSAA]: {
-      endpoint: '/api/animals?&location=' + location + '&page=' +  page,
+      endpoint: '/api/animals?&location=' + location + '&distance=10' + '&page=' + page,
       method: 'GET',
       types: [
         REQUEST,
