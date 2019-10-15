@@ -21,6 +21,11 @@ body h1, body h2, body h3 {
 
 /* GENERIC STYLES */
 
+:root {
+  --black-leather: #223022;
+  --gray-asparagus: #3E573E;
+}
+
 .view {
     padding: 70px 0 0 0;
 }
@@ -176,6 +181,18 @@ h3 {
 
 .contact-container {
     color: black;
+}
+
+.data-pill {
+    display: inline-block;
+    background-color: var(--gray-asparagus);
+    color: white;
+    min-width: 80px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px 10px 5px 0;
+    box-shadow: 2px 2px 2px var(--black-leather);
+    text-align: center;
 }
 
 .about-inner {
