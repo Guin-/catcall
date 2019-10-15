@@ -1,4 +1,5 @@
 import React from 'react'
+import Datapill from './datapill'
 
 class CatDetail extends React.Component {
   constructor(props) {
@@ -19,28 +20,28 @@ class CatDetail extends React.Component {
               (health.length > 0) &&
               <div>
                  <h3> Health & Behavior </h3>
-                 <p> {health} </p>
+                 { health.map((tag, index) => { return(<Datapill key={index} tag={tag}/>)})}
               </div>
             }
             {
               (okWith.length > 0) &&
               <div>
                 <h3> Ok With </h3>
-                <p>{okWith}</p>
+                 { okWith.map((tag, index) => { return(<Datapill key={index} tag={tag}/>)})}
               </div>
             }
             {
               (notOkWith.length > 0) &&
               <div>
                 <h3> Prefers Home Without </h3>
-                <p>{notOkWith}</p>
+                 { notOkWith.map((tag, index) => { return(<Datapill key={index} tag={tag}/>)})}
               </div>
             }
             {
               (tags.length > 0) &&
                 <div>
                   <h3> Characteristics </h3>
-                  <p> {tags.map(tag => tag)}</p>
+                 { tags.map((tag, index) => { return(<Datapill key={index} tag={tag}/>)})}
                 </div>
               }
           </div>
