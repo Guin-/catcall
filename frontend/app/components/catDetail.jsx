@@ -1,4 +1,5 @@
 import React from 'react'
+import { Col } from 'react-bootstrap'
 import Datapill from './datapill'
 
 class CatDetail extends React.Component {
@@ -13,9 +14,10 @@ class CatDetail extends React.Component {
     const okWith = Object.keys(environment).filter(key => environment[key])
     const notOkWith = Object.keys(environment).filter(key => !environment[key] == null  && !environment[key])
     return (
-        <div className="div3 area">
-        <div className="div4 about-inner">
+        <Col lg={10} lgOffset={1}>
+        <div className="detail-section about-inner">
           <div>
+          <h2> About </h2>
             {
               (health.length > 0) &&
               <div>
@@ -44,15 +46,13 @@ class CatDetail extends React.Component {
                  { tags.map((tag, index) => { return(<Datapill key={index} tag={tag}/>)})}
                 </div>
               }
-          </div>
         </div>
-        <div className="div5 about-inner">
           <div>
             <h3> Meet {cat.name} </h3>
             <p> { cat.description ? cat.description : "Please use the given contact information to find out more about me!" }</p>
           </div>
-        </div>
-        </div>
+      </div>
+      </Col>
     )
   }
 }

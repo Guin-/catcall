@@ -1,8 +1,5 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import email from '../../static/email.png'
-import phone from '../../static/phone.png'
-import address from '../../static/address.png'
 
 class ShelterDetail extends React.Component {
   constructor(props) {
@@ -12,16 +9,18 @@ class ShelterDetail extends React.Component {
   render() {
     const { cat } = this.props
     return (
-        <div className="div2 area">
-          <div className="contact-container">
-            <h2> Contact </h2>
-            <p>{cat.contact.phone}</p>
-            <p>{cat.contact.email}</p>
-            <p>{cat.contact.address.address1}</p>
-            <p>{cat.contact.address.address2}</p>
-            <p>{cat.contact.address.city} {cat.contact.address.state} {cat.contact.address.postcode}</p>
+        <Col lg={5} md={6}>
+          <div className="detail-section">
+            <div className="contact-container">
+              <h2> Adopt {cat.name}</h2>
+              <p>{cat.contact.phone}</p>
+              <p>{cat.contact.email}</p>
+              <p>{cat.contact.address.address1}</p>
+              <p>{cat.contact.address.address2}</p>
+              <p>{cat.contact.address.city} {cat.contact.address.state} {cat.contact.address.postcode}</p>
+            </div>
           </div>
-        </div>
+        </Col>
     )
   }
 }
