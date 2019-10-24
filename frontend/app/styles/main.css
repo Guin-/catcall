@@ -140,47 +140,30 @@ h3 {
 
 /* DETAIL PAGE */
 
-.parent {
-    padding-top: 45px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 55px;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
-    background-color: #f2f2f2;
-    height: 100vh;
-}
-
-.area {
+.detail-section {
   background-color: white;
   color: black;
   border-radius: 20px;
   box-shadow: 0 4px 20px 0 #969278;
+  margin: 15px;
 }
 
-.div1 {
-    grid-area: 1 / 1 / 4 / 4;
+.detail-view-image-container {
+    height: 400px;
 }
-.div2 {
-    grid-area: 4 / 1 / 7 / 4;
-}
-.div3 { grid-area: 1 / 4 / 7 / 10; }
-.div4 { grid-area: 1 / 4 / 5 / 10; }
-.div5 { grid-area: 5 / 4 / 7 / 10; }
-
-
 
 .detail-view-image {
     height: 100%;
     width: 100%;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .contact-container {
     color: black;
+    padding: 20px;
+    text-align: center;
+    height: 400px;
 }
 
 .data-pill {

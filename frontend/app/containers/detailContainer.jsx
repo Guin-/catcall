@@ -1,10 +1,11 @@
 import React from 'react'
-import { Grid, Row } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { fetchCatDetail, clearCatDetail } from '../actions/catDetailActions'
 import Loading from '../components/loading'
 import CatDetail from '../components/catDetail'
 import ShelterDetail from '../components/shelterDetail'
+import CatPhoto from '../components/catPhoto'
 import ErrorAlert from '../components/errorAlert'
 import image_not_available  from '../../static/image_not_available.png'
 
@@ -36,15 +37,15 @@ class DetailContainer extends React.Component {
       )
     }
     return (
-      <div className="parent">
-        <div className="div1 area">
-            <img src={ catDetail.photos.length >=1 ? catDetail.photos[0]['large'] : image_not_available }
-              className="detail-view-image"
-            />
-          </div>
-        <ShelterDetail cat={catDetail}/>
-        <CatDetail cat={catDetail}/>
-      </div>
+      <Grid className="view">
+        <Row>
+            <CatPhoto cat={catDetail}/>
+            <ShelterDetail cat={catDetail}/>
+        </Row>
+        <Row>
+          <CatDetail cat={catDetail}/>
+        </Row>
+      </Grid>
     )
   }
 }
