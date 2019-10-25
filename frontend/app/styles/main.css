@@ -9,6 +9,7 @@ body p, body span, body h4{
 
 body h1, body h2, body h3 {
     font-family: 'Noto Sans', 'Lucida Grande', Tahoma, sans-serif;
+    color: var(--black-olive);
 }
 
 .navbar-brand {
@@ -24,6 +25,9 @@ body h1, body h2, body h3 {
 :root {
   --black-leather: #223022;
   --gray-asparagus: #3E573E;
+  --black-olive: #3C413A; /* primary heading */
+  --ebony: #5E605B;       /* secondary heading */
+  --pastel-gray: #CCC;
 }
 
 .view {
@@ -41,20 +45,24 @@ body h1, body h2, body h3 {
     height: 100vh;
     background-size: cover;
     background-image: url('../../static/greencatlandscape.jpeg');
-    background-color: #000;
+    background-color: var(--black-leather);
 }
 
 .search-section {
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: var(--pastel-gray);
+}
+
+.search-section h2 {
+    color: var(--pastel-gray);
 }
 
 .submit-button {
     background-color: #3C3731;
     padding: 6px 12px;
     margin-bottom: 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--pastel-gray);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 400;
@@ -99,11 +107,11 @@ body h1, body h2, body h3 {
 }
 
 .info-container h3 {
-    color: #3C413A
+    color: var(--black-olive);
 }
 
 .info-container h4 {
-    color: #5E605B;
+    color: var(--ebony);
 }
 
 .loading {
@@ -142,7 +150,6 @@ h3 {
 
 .detail-section {
   background-color: white;
-  color: black;
   border-radius: 20px;
   box-shadow: 0 4px 20px 0 #969278;
   margin: 15px;
@@ -164,6 +171,21 @@ h3 {
     padding: 20px;
     text-align: center;
     height: 400px;
+}
+
+.contact-heading{
+    padding: 1em;
+    height: 25%;
+    color: var(--black-olive);
+}
+
+.contact-details {
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 75%;
+    color: var(--ebony);
 }
 
 .data-pill {
