@@ -49,7 +49,11 @@ class CatDetail extends React.Component {
         </div>
           <div>
             <h3> Meet {cat.name} </h3>
-            <p> { cat.description ? cat.description : "Please use the given contact information to find out more about me!" }</p>
+            { cat.description ? (
+              <p> {cat.description  + "Find my full description on my"} <span><a href={cat.url}> Petfinder page</a></span>.</p>
+              ) : (
+              <p>Please use the given contact information to find out more about me!</p>
+              )}
           </div>
       </div>
       </Col>
