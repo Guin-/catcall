@@ -135,15 +135,24 @@ h3 {
 
 /* ABOUT PAGE */
 
-.about {
-    text-align: center;
-    color:#e4ebf5;
-    background-color: #000;
-    height: 100vh;
-}
-
 .about-copy {
     padding: 30px;
+    font-size: 16px;
+}
+
+.contact {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.icon-image-container {
+    padding: 10px;
+}
+
+.icon-image {
+    padding: 10px;
 }
 
 /* DETAIL PAGE */
@@ -212,6 +221,10 @@ h3 {
 
     .image-container {
         padding: 20px;
+    }
+
+    .contact {
+        flex-direction: column;
     }
 
     .viewport-background {

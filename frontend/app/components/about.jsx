@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import github from '../../static/github.png'
 import mail from '../../static/mail.png'
-import location from '../../static/location.png'
 
 class About extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <Grid className="view about">
+      <Grid className="view">
         <Row>
           <Col lg={8} lgOffset={2} md={8} mdOffset={2} xs={10} xsOffset={1} className="text-center">
             <div>
@@ -27,18 +26,14 @@ class About extends React.Component {
             </div>
             <div>
               <h1>Contact</h1>
-                <div className="about-copy">
+                <div className="contact">
                   <div className='icon-image-container'>
-                    <a href="https://github.com/Guin-/"><img className="icon-image inverted"src={github}/></a>
+                    <a href="https://github.com/Guin-/"><img className="icon-image"src={github}/></a>
                     <p>@Guin-</p>
                   </div>
                   <div className='icon-image-container'>
-                    <a href="mailto:angelikajarosz@gmail.com"><img className="icon-image inverted" src={mail}/></a>
+                    <a href="mailto:angelikajarosz@gmail.com"><img className="icon-image" src={mail}/></a>
                     <p>angelikajarosz@gmail.com</p>
-                  </div>
-                  <div className='icon-image-container'>
-                    <img className="icon-image inverted" src={location}/>
-                    <p>Brooklyn, NY</p>
                   </div>
                 </div>
             </div>
