@@ -73,6 +73,7 @@ body h1, body h2, body h3 {
 
 .list-view {
     background-color: #f2f2f2;
+    height: 100vh;
 }
 
 .cat-card {
@@ -117,7 +118,7 @@ body h1, body h2, body h3 {
 .loading {
     text-align: center;
     display: flex;
-    height: 100vh;
+    height: 70vh;
 }
 
 .loading-container {
