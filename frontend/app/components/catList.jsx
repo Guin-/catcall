@@ -16,7 +16,6 @@ class CatList extends React.Component {
   }
 
   handleInfiniteLoad() {
-    this.setState({isInfiniteLoading: true})
     setTimeout(() => {
       this.setState({ page : this.state.page + 1,
                       isInfiniteLoading: false}),
@@ -68,7 +67,7 @@ class CatList extends React.Component {
               </Infinite>
             ) : (
               <Infinite elementHeight={400} useWindowAsScrollContainer
-                infiniteLoadBeginEdgeOffset={600}
+                infiniteLoadBeginEdgeOffset={100}
                 isInfiniteLoading={this.state.isInfiniteLoading}
                 onInfiniteLoad={this.handleInfiniteLoad}
                 loadingSpinnerDelegate={this.elementInfiniteLoad()}
