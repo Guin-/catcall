@@ -16,6 +16,7 @@ class CatList extends React.Component {
   }
 
   handleInfiniteLoad() {
+    this.setState({isInfiniteLoading: true})
     setTimeout(() => {
       this.setState({ page : this.state.page + 1,
                       isInfiniteLoading: false}),
