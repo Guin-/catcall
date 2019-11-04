@@ -33,7 +33,9 @@ class DetailContainer extends React.Component {
     }
     else if ( isFetching || Object.entries(catDetail).length === 0  ) {
       return(
-        <Loading />
+        <div className="view">
+          <Loading />
+        </div>
       )
     }
     return (
