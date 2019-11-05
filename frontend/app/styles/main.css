@@ -196,6 +196,7 @@ h3 {
     justify-content: flex-start;
     height: 75%;
     color: var(--ebony);
+    word-wrap: break-word;
 }
 
 .data-pill {
